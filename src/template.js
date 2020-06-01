@@ -79,6 +79,7 @@ export default function template(layout) {
     class="allies__dismiss"
     id="dismiss-allies"
     aria-label="dismiss"
+    tabindex="0"
   >
     <svg
       width="15"
