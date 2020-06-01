@@ -9,25 +9,25 @@ const plugins = [
 
 export default [
   {
-    input: "src/allies.js",
+    input: "src/racial-equity-banner.js",
     output: {
-      file: "allies.js",
+      file: "racial-equity-banner.js",
       format: "iife",
     },
     plugins,
   },
   {
-    input: "src/allies-bottom.js",
+    input: "src/equity-bottom.js",
     output: {
-      file: "allies-bottom.js",
+      file: "racial-equity-banner-bottom.js",
       format: "iife",
     },
     plugins,
   },
   {
-    input: "src/allies-fullscreen.js",
+    input: "src/equity-fullscreen.js",
     output: {
-      file: "allies-fullscreen.js",
+      file: "racial-equity-banner-fullscreen.js",
       format: "iife",
     },
     plugins,

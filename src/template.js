@@ -66,7 +66,7 @@ export default function template(layout) {
 
   <span style="${!isFullScreen ? 'margin-right: 32px;' : ''}">
     <span class="allies__text"
-      >We stand in support of racial equality,&nbsp;</span
+      >We stand in support of racial equity and justice,&nbsp;</span
     ><span class="allies__text"
       ><a href="https://blacklivesmatters.carrd.co/" target="_blank"
         >learn how you can help</a
