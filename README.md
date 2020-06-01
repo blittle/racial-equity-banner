@@ -9,7 +9,7 @@ Show your support for Racial Equality by adding this banner to your company or p
 Simply add the following script to your page:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/allies@1.0.2/allies.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/allies@1.0.3/allies.js" async></script> 
 ```
 
 ## Example
