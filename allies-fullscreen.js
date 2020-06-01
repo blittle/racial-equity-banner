@@ -227,6 +227,6 @@
     fontLink.parentElement.removeChild(fontLink);
   }
 
-  start({layout: 'top'});
+  start({layout: 'fullscreen'});
 
 }());
