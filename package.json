@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/blittle/racial-equity-banner#readme",
   "devDependencies": {
-    "rollup": "^2.12.0"
+    "rollup": "^2.12.0",
+    "rollup-plugin-string": "^3.0.0"
   }
 }
