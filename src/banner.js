@@ -33,9 +33,9 @@ function createBanner(layout) {
   bannerTag.innerHTML = template(layout);
 
   document.body.parentElement.appendChild(bannerTag);
-  bannerTag
-    .querySelector("#dismiss-allies")
-    .addEventListener("click", dismissBanner);
+  const dismiss = bannerTag.querySelector("#dismiss-allies");
+  dismiss.addEventListener("click", dismissBanner);
+  dismiss.addEventListener("keydown", handleKeyboardClick(dismissBanner));
 }
 
 function dismissBanner() {
@@ -48,6 +48,14 @@ function cleanup() {
   bannerTag.parentElement.removeChild(bannerTag);
   styleTag.parentElement.removeChild(styleTag);
   fontLink.parentElement.removeChild(fontLink);
+}
+
+function handleKeyboardClick(fn) {
+  return function(e) {
+    if(e.key === 'Enter' || e.key === ' ') {
+      return fn(e)
+    }
+  }
 }
 
 export { start };
