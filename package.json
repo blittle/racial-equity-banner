@@ -1,6 +1,6 @@
 {
   "name": "allies",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A script that allows your organization to express your support for equality",
   "main": "allies.js",
   "scripts": {
