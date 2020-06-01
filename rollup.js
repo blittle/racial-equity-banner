@@ -1,11 +1,6 @@
-import { string } from "rollup-plugin-string";
+import babel from "rollup-plugin-babel";
 
-const plugins = [
-  string({
-    // Required to be specified
-    include: ["**/*.html", "**/*.css"],
-  }),
-];
+const plugins = [babel()];
 
 export default [
   {
