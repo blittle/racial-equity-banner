@@ -9,19 +9,19 @@ Show your support for Racial Equity and Justice by adding this banner to your co
 Simply add the following script to your page:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/racial-equity-banner@1.1.1/racial-equity-banner.js" async></script> 
+<script src="https://cdn.jsdelivr.net/npm/racial-equity-banner@1.0.0/racial-equity-banner.js" async></script> 
 ```
 
 If you want the banner fixed the bottom of the page, use:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/racial-equity-banner@1.1.1/racial-equity-banner-bottom.js" async></script> 
+<script src="https://cdn.jsdelivr.net/npm/racial-equity-banner@1.0.0/racial-equity-banner-bottom.js" async></script> 
 ```
 
 If you want a fullscreen modal:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/racial-equity-banner@1.1.1/racial-equity-banner-fullscreen.js" async></script> 
+<script src="https://cdn.jsdelivr.net/npm/racial-equity-banner@1.0.0/racial-equity-banner-fullscreen.js" async></script> 
 ```
 
 ## Example
