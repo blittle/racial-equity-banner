@@ -34,14 +34,14 @@ function createBanner(layout) {
 
   document.body.parentElement.appendChild(bannerTag);
   const dismiss = bannerTag.querySelector("#dismiss-allies");
-  dismiss.addEventListener("click", dismissBanner);
+  dismiss.addEventListener("click", dismissBanner.bind(null, layout));
   dismiss.addEventListener("keydown", handleKeyboardClick(dismissBanner));
 }
 
-function dismissBanner() {
+function dismissBanner(layout) {
   bannerTag.querySelector(".allies__banner").className =
     "allies__banner allies__hidden";
-  setTimeout(cleanup, 500);
+  setTimeout(cleanup, layout === 'fullscreen' ? 0 : 500);
 }
 
 function cleanup() {

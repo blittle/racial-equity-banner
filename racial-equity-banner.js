@@ -8,7 +8,7 @@
   }
 
   function template(layout) {
-    return "\n<div class=\"allies__banner allies__hidden\">\n  <span>\n    <span class=\"allies__text\"\n      >We stand in support of racial equity and justice,&nbsp;</span\n    ><span class=\"allies__text\"\n      ><a href=\"https://blacklivesmatters.carrd.co/\" target=\"_blank\"\n        >learn how you can help</a\n      >.</span\n    >\n  </span>\n\n  <span\n    role=\"button\"\n    class=\"allies__dismiss\"\n    id=\"dismiss-allies\"\n    aria-label=\"dismiss\"\n    tabindex=\"0\"\n  >\n    <svg width=\"15\" height=\"15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path\n        d=\"M13.25 1.75l-11.5 11.5M1.75 1.75l11.5 11.5\"\n        stroke=\"#e1e1e1\"\n        stroke-width=\"2\"\n        stroke-linecap=\"round\"\n        stroke-linejoin=\"round\"\n      />\n    </svg>\n  </span>\n</div>\n";
+    return "\n<div class=\"allies__banner allies__hidden\">\n  <span>\n    <span class=\"allies__text\"><a href=\"https://blacklivesmatter.com/\" target=\"_blank\">Black Lives Matter</a>. <a href=\"https://www.joincampaignzero.org/\" target=\"_blank\">Support Campaign Zero</a>,</span>\n    <span class=\"allies__text\">the <a href=\"https://support.eji.org/give/153413/#!/donation/checkout\" target=\"_blank\">Equal Justice Initiative</a>, </span>\n    <span class=\"allies__text\">and <a href=\"https://bailfunds.github.io/\" target=\"_blank\">local bail funds</a>.</span>\n  </span>\n\n  <span\n    role=\"button\"\n    class=\"allies__dismiss\"\n    id=\"dismiss-allies\"\n    aria-label=\"dismiss\"\n    tabindex=\"0\"\n  >\n    <svg width=\"15\" height=\"15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path\n        d=\"M13.25 1.75l-11.5 11.5M1.75 1.75l11.5 11.5\"\n        stroke=\"#d1d1d1\"\n        stroke-width=\"2\"\n        stroke-linecap=\"round\"\n        stroke-linejoin=\"round\"\n      />\n    </svg>\n  </span>\n</div>\n";
   }
 
   var styleTag;
@@ -18,7 +18,7 @@
   function start(_ref) {
     var layout = _ref.layout;
     createStyles(layout);
-    createBanner();
+    createBanner(layout);
     setTimeout(function () {
       bannerTag.querySelector(".allies__banner").className = "allies__banner";
     }, 500);
@@ -41,13 +41,13 @@
     bannerTag.innerHTML = template();
     document.body.parentElement.appendChild(bannerTag);
     var dismiss = bannerTag.querySelector("#dismiss-allies");
-    dismiss.addEventListener("click", dismissBanner);
+    dismiss.addEventListener("click", dismissBanner.bind(null, layout));
     dismiss.addEventListener("keydown", handleKeyboardClick(dismissBanner));
   }
 
-  function dismissBanner() {
+  function dismissBanner(layout) {
     bannerTag.querySelector(".allies__banner").className = "allies__banner allies__hidden";
-    setTimeout(cleanup, 500);
+    setTimeout(cleanup, layout === 'fullscreen' ? 0 : 500);
   }
 
   function cleanup() {

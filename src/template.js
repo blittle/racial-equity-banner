@@ -1,16 +1,12 @@
 export default function template(layout) {
-  const isFullScreen = layout === 'fullscreen';
+  const isFullScreen = layout === "fullscreen";
 
   return `
 <div class="allies__banner allies__hidden">
   <span>
-    <span class="allies__text"
-      >We stand in support of racial equity and justice,&nbsp;</span
-    ><span class="allies__text"
-      ><a href="https://blacklivesmatters.carrd.co/" target="_blank"
-        >learn how you can help</a
-      >.</span
-    >
+    <span class="allies__text"><a href="https://blacklivesmatter.com/" target="_blank">Black Lives Matter</a>. <a href="https://www.joincampaignzero.org/" target="_blank">Support Campaign Zero</a>,</span>
+    <span class="allies__text">the <a href="https://support.eji.org/give/153413/#!/donation/checkout" target="_blank">Equal Justice Initiative</a>, </span>
+    <span class="allies__text">and <a href="https://bailfunds.github.io/" target="_blank">local bail funds</a>.</span>
   </span>
 
   <span
