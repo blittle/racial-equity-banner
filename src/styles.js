@@ -7,7 +7,7 @@ export default function styles(type) {
   position: relative;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  color: black;
+  color: #e1e1e1;
 }
 .allies__container a {
   color: #2f80ed;
@@ -18,7 +18,7 @@ export default function styles(type) {
 }
 .allies__banner {
   position: fixed;
-  background-color: #efefef;
+  background-color: black;
   ${
     isFullScreen
       ? "font-size: 16px; line-height: 24px;"
@@ -29,7 +29,7 @@ export default function styles(type) {
   width: 100%;
   ${isFullScreen ? "height: 100%;" : ""}
   margin: 0;
-  padding: 8px 0;
+  padding: 16px 0;
   display: flex;
   ${isFullScreen ? "flex-direction: column;" : ""}
   justify-content: center;
@@ -52,11 +52,6 @@ export default function styles(type) {
 }
 .allies__hidden {
   ${isTop ? "top: -100px" : "bottom: -100px"};
-}
-.allies__icon {
-  position: relative;
-  ${!isFullScreen ? "margin-right: 8px;" : ""}
-  top: 3px;
 }
 .allies__dismiss {
   position: absolute;
