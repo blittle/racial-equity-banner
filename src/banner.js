@@ -6,12 +6,20 @@ var bannerTag;
 var fontLink;
 
 function start({ layout }) {
-  createStyles(layout);
-  createBanner(layout);
+  if (document.readyState === 'loading' || !document.body) {
+    window.addEventListener('DOMContentLoaded', mount)
+  } else {
+    mount()
+  }
 
-  setTimeout(function () {
-    bannerTag.querySelector(".allies__banner").className = "allies__banner";
-  }, 500);
+  function mount() {
+    createStyles(layout);
+    createBanner(layout);
+
+    setTimeout(function () {
+      bannerTag.querySelector(".allies__banner").className = "allies__banner";
+    }, 500);
+  }
 }
 
 function createStyles(layout) {

@@ -17,11 +17,20 @@
 
   function start(_ref) {
     var layout = _ref.layout;
-    createStyles(layout);
-    createBanner(layout);
-    setTimeout(function () {
-      bannerTag.querySelector(".allies__banner").className = "allies__banner";
-    }, 500);
+
+    if (document.readyState === 'loading' || !document.body) {
+      window.addEventListener('DOMContentLoaded', mount);
+    } else {
+      mount();
+    }
+
+    function mount() {
+      createStyles(layout);
+      createBanner(layout);
+      setTimeout(function () {
+        bannerTag.querySelector(".allies__banner").className = "allies__banner";
+      }, 500);
+    }
   }
 
   function createStyles(layout) {
