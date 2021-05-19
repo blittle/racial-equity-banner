@@ -1,6 +1,6 @@
 {
   "name": "racial-equity-banner",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A script that allows your organization to express your support for racial equity and justice",
   "main": "racial-equity-banner.js",
   "scripts": {
